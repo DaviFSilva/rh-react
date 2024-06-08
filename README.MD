@@ -23,7 +23,7 @@ Seu objetivo é criar um Dockerfile para rodar uma aplicação Node.js com React
 ![A imagem DICOM Fornecida](docs/1.png)
 
 
-### crosshair de Régua
+### Crosshair de Régua
 
 1. Rotacione a imagem 
 ![A imagem DICOM Fornecida](docs/2.png)

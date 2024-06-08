@@ -1,11 +1,13 @@
 import * as cornerstone from '@cornerstonejs/core';
 import * as cornerstoneTools from '@cornerstonejs/tools';
+import setupCS from "helpers/setupCornerStone";
+import setupIL from "helpers/setupImageLoader";
 
 const viewportId = 'CT_AXIAL_STACK';
 const renderingEngineId = 'myRenderingEngine';
 const toolGroupId = 'STACK_TOOL_GROUP_ID';
 
-export default function createImage(){
+export default async function createImage(){
   const element = document.getElementById('imageContainer');
 
     let imageId = "wadouri:http://localhost:9999";
@@ -24,7 +26,6 @@ export default function createImage(){
 
     toolGroup.addTool(ScaleOverlayTool.toolName)
     toolGroup.addTool(ZoomTool.toolName)
-
     
     toolGroup.setToolActive(cornerstoneTools.ZoomTool.toolName, {
       bindings: [
@@ -34,6 +35,9 @@ export default function createImage(){
       ],
     });
     toolGroup.setToolEnabled(ScaleOverlayTool.toolName);    
+
+    setupIL()
+    await setupCS()
 
     const renderingEngine = new cornerstone.RenderingEngine(renderingEngineId);
     const viewportInput = {
@@ -47,9 +51,7 @@ export default function createImage(){
     toolGroup.addViewport(viewportId, renderingEngineId);
 
     const viewport = renderingEngine.getViewport(viewportId);
-
-    viewport.setStack([imageId]);
-
+    await viewport.setStack([imageId]);
     viewport.render();
 }
 

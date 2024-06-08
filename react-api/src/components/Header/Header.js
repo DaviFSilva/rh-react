@@ -6,11 +6,11 @@ export default function Header(){
   return(
     <>
     <header>
-      <div id='container'>
-        <div id='logo'>
+      <div id='headerContainer'>
+        <div id='headerLogo'>
           RH-React
         </div>
-        <div id='description'>
+        <div id='headerDescription'>
           Desafio RT Medical System de React
         </div>
       </div>

@@ -1,9 +1,14 @@
-.container{
+#contentContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+}
+
+#imageContainer{
+  border: solid 5px #26a69a;
+  border-radius: 15px;
 }
 
 #imageContainer div{
@@ -21,10 +26,6 @@
   margin-bottom: 10px;
 }
 
-#rotateButton:focus {
-  background-color: #26a69a;
-}
-
-#crosshairButton:focus {
+#rotateButton:focus, #crosshairButton:focus {
   background-color: #26a69a;
 }

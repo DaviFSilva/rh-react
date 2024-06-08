@@ -5,13 +5,12 @@ Esta aplicação foi feita para o desafio de contratação, focado em React, da 
 O sistema foi construído usando o framework React. Para a manipulação de imagens Dicom, foi usado o framework CornerStoneJS. Além disso, ela é integrada ao Docker.
 
 # Imagens de Visualização da Aplicação
-
 <div align="center">
-    ![Página Desafio](assets/Desafio_page-1.png)
-    ![Página Desafio - Imagem Carregada](assets/Desafio_page-2.png)
-    ![Página Desafio - Imagem Rotacionada](assets/Desafio_page-3.png)
+    <img src="assets/Desafio_page-1.png">
+    <img src="assets/Desafio_page-2.png">
+    <img src="assets/Desafio_page-3.png">
 </div>
-
+    
 ## Scripts Disponíveis
 
 Com o terminal no diretório do projeto (rh-react/react-api):
